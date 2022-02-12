@@ -3,19 +3,20 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { GlobalStyle } from './globalStyles';
 import Hero from './components/Hero';
 import Products from './components/Products';
-import { productData, productDataTwo } from './components/Products/data';
 import Feature from './components/Feature';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import PDP from './components/PDP';
 import Pizzas from './components/Pizzas';
-import Deserts from './components/Deserts';
+import {connect} from 'react-redux'
 
 
-function App() {
+function App({products}) {
 
- 
+  
+  
+  
   return (
     <Router>
       <GlobalStyle />
@@ -23,16 +24,16 @@ function App() {
       <Switch >
           <Route exact path='/' >
           <Hero />
-          <Products heading='Choose your favorite' data={productData} />
+          <Products heading='Choose your favorite' type="pizzas" data={products[0]} />
           <Feature />
-          <Products heading='Sweet Treats for You' data={productDataTwo} />
+          <Products heading='Sweet Treats for You' type="desserts" data={products[0]} />
           </Route>
           <Route path='/cart' component={Cart} />
           <Route path='/pizzas'>
-            <Pizzas  data={productData} component={Pizzas}  />
+            <Pizzas  data={products[0]} component={Pizzas}  />
           </Route>
           <Route path='/desserts'>
-            <Pizzas  data={productDataTwo} component={Deserts}  />
+            <Pizzas  data={products[0]} component={Pizzas}  />
           </Route>
           <Route exact path='/product/:id' component={PDP}/>
       </Switch>
@@ -42,4 +43,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps=state => {
+  return {
+    products:state.shop.products
+  }
+}
+
+export default connect(mapStateToProps)(App)

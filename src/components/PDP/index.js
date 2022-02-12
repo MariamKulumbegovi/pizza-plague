@@ -1,24 +1,37 @@
 import React from 'react'
-import { ProductWrapper,ProductImg,DetailedInfoWrapper,
+import { ProductWrapper,DetailedInfoWrapper,
     ProductTitle,ProductDescription ,
     ProductPrice} from '../Cart/CartElements'
 import {PDPContainer,PDPImage} from './PDPElements'
-import img from '../../images/cruiser.png'
+import {addToCart} from '../../redux/shopping/shopping-actions'
 import { ProductButton } from '../Products/ProductsElements'
-const PDP = () => {
+import {connect} from 'react-redux'
+
+const PDP = ({currentItem, addToCart}) => {
+    console.log(currentItem)
   return (
    <PDPContainer>
       <ProductWrapper>
-            <PDPImage src={img}  />
+            <PDPImage src={currentItem.img}  />
             <DetailedInfoWrapper >
-                <ProductTitle>Cruiser</ProductTitle>
-                <ProductDescription>'Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto</ProductDescription>
-                <ProductPrice>15$</ProductPrice>
-                <ProductButton >Add to cart </ProductButton>
+                <ProductTitle>{currentItem.name}</ProductTitle>
+                <ProductDescription>{currentItem.desc}</ProductDescription>
+                <ProductPrice> $ {currentItem.price}</ProductPrice>
+                <ProductButton onClick={()=> addToCart(currentItem.id)} > {currentItem.button} </ProductButton>
             </DetailedInfoWrapper>
         </ProductWrapper>
    </PDPContainer>
   )
 }
 
-export default PDP
+const mapStateToProps= state =>{
+    return {
+        currentItem:state.shop.currentItem
+    }
+}
+const mapDispatchToProps= dispatch =>{
+    return {
+        addToCart: (id) => dispatch(addToCart(id))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(PDP)

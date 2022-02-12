@@ -5,6 +5,9 @@ export const CartContainer=styled.div`
     padding: 5rem calc((100vw - 1300px) / 2);
     background: #4a4444;
     color: #fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end
     
 `
 

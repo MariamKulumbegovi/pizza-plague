@@ -1,4 +1,5 @@
 import React from 'react';
+import FavouriteProduct from './FavouriteProduct';
 import {
   ProductsContainer,
   ProductWrapper,
@@ -12,24 +13,19 @@ import {
   ProductButton
 } from './ProductsElements';
 
-const Products = ({ heading, data }) => {
- 
+const Products = ({ heading, data , type}) => {
+
+  
+
+ console.log(data)
   return (
     <ProductsContainer>
       <ProductsHeading>{heading}</ProductsHeading>
       <ProductWrapper>
         {data.map((product) => {
-          if (product.id <=3){
+          if (product.id <=3 && product.type === type){
             return (
-            <ProductCard key={product.id}>
-              <ProductImg src={product.img} alt={product.alt} />
-              <ProductInfo>
-                <ProductTitle>{product.name}</ProductTitle>
-                <ProductDesc>{product.desc}</ProductDesc>
-                <ProductPrice>{product.price}</ProductPrice>
-                <ProductButton>{product.button}</ProductButton>
-              </ProductInfo>
-            </ProductCard>
+           <FavouriteProduct key={product.id} product={product}/>
           );
           }
         })}

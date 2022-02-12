@@ -16,7 +16,8 @@ export const ProductWrapper = styled.div`
 `;
 
 export const ProductCard = styled.div`
-  margin: 0 2rem;
+position:relative;
+  margin: 2rem 2rem;
   line-height: 2;
   width: 300px;
   &:hover {
@@ -76,3 +77,19 @@ export const ProductButton = styled.button`
     color: #000;
   }
 `;
+
+export const AddInCart=styled.div`
+   
+
+    position: absolute;
+    right: 2px;
+    top:250px;
+    font-size: xx-large;
+
+
+    &:hover {
+    color:orange
+  }
+
+   
+`

@@ -13,11 +13,14 @@ import {
 import {FiShoppingCart} from 'react-icons/fi'
 import {GiFullPizza} from 'react-icons/gi'
 
-const Sidebar = ({ isOpen, toggle }) => {
+const Sidebar = ({ isOpen, toggle, ShoppingCartQTY }) => {
+
+  
+  
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
     <CartIcon  to="/cart">
-    <CartQTY>7</CartQTY>
+    <CartQTY>{ShoppingCartQTY}</CartQTY>
     <FiShoppingCart fontSize="xx-large" />
     </CartIcon>
       <Icon onClick={toggle}>

@@ -25,15 +25,3 @@ export const ProductWrapper = styled.div`
 export const Img_cart=styled.div`
     position:relative
 `
-export const AddToCart=styled.div`
-   position: absolute;
-    right: -5px;
-    bottom:-18px;
-    font-size: xx-large;
-
-    &:hover {
-    color:orange
-  }
-
-   
-`

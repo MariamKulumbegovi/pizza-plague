@@ -10,9 +10,10 @@ import Cart from './components/Cart';
 import PDP from './components/PDP';
 import Pizzas from './components/Pizzas';
 import {connect} from 'react-redux'
+import { Redirect } from 'react-router-dom';
 
 
-function App({products}) {
+function App({products , currentItem}) {
 
   
   
@@ -35,7 +36,7 @@ function App({products}) {
           <Route path='/desserts'>
             <Pizzas  data={products[0]} component={Pizzas}  />
           </Route>
-          <Route exact path='/product/:id' component={PDP}/>
+          {!currentItem? ( <Redirect to="/"/>) :  <Route exact path='/product/:id' component={PDP}/> }
       </Switch>
      
       <Footer />
@@ -45,7 +46,8 @@ function App({products}) {
 
 const mapStateToProps=state => {
   return {
-    products:state.shop.products
+    products:state.shop.products,
+    currentItem: state.shop.currentItem
   }
 }
 

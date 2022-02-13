@@ -54,6 +54,8 @@ export const ProductInfo = styled.div`
 
 export const ProductDesc = styled.p`
   margin-bottom: 1rem;
+  max-width: 450px;
+  width: 100%;
 `;
 
 export const ProductPrice = styled.p`

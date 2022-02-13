@@ -1,12 +1,8 @@
-import React from 'react'
-import { DesertsContainer } from './DesertsElements'
+import React from 'react';
+import { DesertsContainer } from './DesertsElements';
 
 const Deserts = () => {
-  return (
-    <DesertsContainer>
-        deserts
-    </DesertsContainer>
-  )
-}
+  return <DesertsContainer>deserts</DesertsContainer>;
+};
 
-export default Deserts
+export default Deserts;

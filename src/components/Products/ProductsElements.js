@@ -16,7 +16,7 @@ export const ProductWrapper = styled.div`
 `;
 
 export const ProductCard = styled.div`
-position:relative;
+  position: relative;
   margin: 2rem 2rem;
   line-height: 2;
   width: 300px;
@@ -24,7 +24,6 @@ position:relative;
     transform: scale(1.1);
   }
 `;
-
 
 export const ProductImg = styled.img`
   height: 300px;
@@ -78,18 +77,13 @@ export const ProductButton = styled.button`
   }
 `;
 
-export const AddInCart=styled.div`
-   
+export const AddInCart = styled.div`
+  position: absolute;
+  right: 2px;
+  top: 250px;
+  font-size: xx-large;
 
-    position: absolute;
-    right: 2px;
-    top:250px;
-    font-size: xx-large;
-
-
-    &:hover {
-    color:orange
+  &:hover {
+    color: orange;
   }
-
-   
-`
+`;

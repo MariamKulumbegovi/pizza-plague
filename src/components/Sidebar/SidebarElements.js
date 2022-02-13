@@ -22,27 +22,27 @@ export const SidebarContainer = styled.aside`
 export const CloseIcon = styled(FaTimes)`
   color: #000;
 `;
-export const CartIcon=styled(Link)  `
-    align-self: baseline;
-    margin-top: 20px;
-    margin-left: 12px;
-    color:black 
-    ` 
+export const CartIcon = styled(Link)`
+  align-self: baseline;
+  margin-top: 20px;
+  margin-left: 12px;
+  color: black;
+`;
 
-export const CartQTY=styled.span`
-   position:absolute;
-    z-index: 50;
-    color: black;
-    background-color: #2a2a2a;
-    border-radius: 100%;
-    width: 15px;
-    height: 20px;
-    text-align: center;
-    font-weight: 200;
-    top: 12px;
-    left: 30px;
-    color: #ffff;
-    `    
+export const CartQTY = styled.span`
+  position: absolute;
+  z-index: 50;
+  color: black;
+  background-color: #2a2a2a;
+  border-radius: 100%;
+  width: 15px;
+  height: 20px;
+  text-align: center;
+  font-weight: 200;
+  top: 12px;
+  left: 30px;
+  color: #ffff;
+`;
 
 export const Icon = styled.div`
   position: absolute;
@@ -87,8 +87,8 @@ export const SideTextWrap = styled.div`
   display: flex;
   justify-content: center;
   font-weight: bold;
-  text-align:center
+  text-align: center;
 `;
-export const PIZZAPLAGUE=styled.span`
-  margin-right:10px
-`
+export const PIZZAPLAGUE = styled.span`
+  margin-right: 10px;
+`;

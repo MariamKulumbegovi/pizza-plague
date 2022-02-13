@@ -8,10 +8,8 @@ import {
 } from './HeroElements';
 
 const Hero = () => {
-
-
   return (
-    <HeroContainer>
+    <HeroContainer autoPlay muted loop>
       <HeroContent>
         <HeroItems>
           <HeroH1>Greatest Pizza Ever</HeroH1>

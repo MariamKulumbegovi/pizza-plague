@@ -8,10 +8,10 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   font-weight: 700;
-  background-color:#242424;
-  position:fixed;
-  width:100%;
-  z-index:800
+  background-color: #242424;
+  position: fixed;
+  width: 100%;
+  z-index: 800;
 `;
 
 export const NavLink = styled(Link)`
@@ -25,11 +25,11 @@ export const NavLink = styled(Link)`
   @media screen and (max-width: 500px) {
     position: absolute;
     top: 17px;
-    font-size:1.4rem;
+    font-size: 1.4rem;
     left: 25px;
   }
 `;
-export const ShoppingCartQTY=styled.span`
+export const ShoppingCartQTY = styled.span`
     position:absolute;
     top: -8px;
     right: -4px;
@@ -43,19 +43,19 @@ export const ShoppingCartQTY=styled.span`
     font-weight:200
 }
   
-`
-export const ShoppingCart=styled(Link)`
+`;
+export const ShoppingCart = styled(Link)`
   display: block;
-    position: absolute;
-    top: 20px;
-    right: 150px;
-    cursor: pointer;
-    color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 150px;
+  cursor: pointer;
+  color: #fff;
 
-    @media screen and (max-width: 700px) {
-   display:none
+  @media screen and (max-width: 700px) {
+    display: none;
   }
-`
+`;
 export const NavIcon = styled.div`
   display: block;
   position: absolute;

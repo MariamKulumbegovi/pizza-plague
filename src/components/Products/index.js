@@ -10,23 +10,17 @@ import {
   ProductInfo,
   ProductDesc,
   ProductPrice,
-  ProductButton
+  ProductButton,
 } from './ProductsElements';
 
-const Products = ({ heading, data , type}) => {
-
-  
-
- console.log(data)
+const Products = ({ heading, data, type }) => {
   return (
     <ProductsContainer>
       <ProductsHeading>{heading}</ProductsHeading>
       <ProductWrapper>
-        {data.map((product) => {
-          if (product.id <=3 && product.type === type){
-            return (
-           <FavouriteProduct key={product.id} product={product}/>
-          );
+        {data.map(product => {
+          if (product.id <= 3 && product.type === type) {
+            return <FavouriteProduct key={product.id} product={product} />;
           }
         })}
       </ProductWrapper>
